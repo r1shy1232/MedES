@@ -143,23 +143,24 @@ const CONDITIONS = [
    affected by confidence. `any` = free-text or chip keywords that trigger. */
 const RED_FLAGS = [
   { level: "999", any: ["chest pain","coughing up blood","cough blood","gasping","choking","cannot speak"],
-    text: "The NHS flu page says to call 999 or go to A&E for sudden chest pain, severe difficulty breathing (gasping, choking or not able to get words out) or coughing up blood.",
+    text: "Sudden chest pain, severe difficulty breathing (gasping, choking or not able to get words out) or coughing up blood needs immediate medical attention. Please visit your nearest hospital or emergency department right away.",
     source: { title: "Flu - NHS", url: NHS + "flu/" } },
   { level: "999", any: ["confused","drowsy","difficulty speaking"],
-    text: "The NHS UTI page says to call 999 or go to A&E if you or your child are confused, drowsy or have difficulty speaking.",
+    text: "Confusion, drowsiness or difficulty speaking (in yourself or a child) needs immediate medical attention. Please visit your nearest hospital or emergency department right away.",
     source: { title: "Urinary tract infections (UTIs) - NHS", url: NHS + "urinary-tract-infections-utis/" } },
   { level: "999", any: ["bone sticking out","bone poking","cold and sweaty","blue lips","heavy bleeding"],
-    text: "The NHS says to call 999 or go to A&E after an injury if a bone is sticking out, there is heavy bleeding, your skin is cold and sweaty, or your skin, lips or tongue are blue, grey or pale.",
+    text: "After an injury, a bone sticking out, heavy bleeding, cold and sweaty skin, or skin, lips or tongue turning blue, grey or pale all need immediate medical attention. Please visit your nearest hospital or emergency department right away.",
     source: { title: "Broken leg - NHS", url: NHS + "broken-leg/" } },
   { level: "999", any: ["stiff neck"],
-    text: "The NHS says a high temperature with a stiff neck, pain looking at bright lights or a rash that does not fade under a glass needs immediate medical help.",
+    text: "A high temperature with a stiff neck, pain looking at bright lights, or a rash that does not fade under a glass needs immediate medical attention. Please visit your nearest hospital or emergency department right away.",
     source: { title: "Retinal migraine - NHS", url: NHS + "retinal-migraine/" } }
 ];
 /* Symptom ids that also trigger an urgent notice */
+/* Symptom ids that also trigger an urgent notice */
 const FLAG_SYMPTOMS = {
-  "deformity": { level: "999", text: "The NHS says to call 999 or go to A&E if an injured limb has changed shape or is at an odd angle.", source: { title: "Broken arm or wrist - NHS", url: NHS + "broken-arm-or-wrist/" } },
-  "numbness": { level: "999", text: "The NHS says to go to A&E or call 999 if an injured arm or wrist is numb, tingling or has pins and needles.", source: { title: "Broken arm or wrist - NHS", url: NHS + "broken-arm-or-wrist/" } },
-  "shortness of breath": { level: "111", text: "The NHS flu page says to ask for an urgent GP appointment or get help from NHS 111 if you have flu symptoms and feel short of breath.", source: { title: "Flu - NHS", url: NHS + "flu/" } }
+  "deformity": { level: "999", text: "An injured limb that has changed shape or is at an odd angle needs immediate medical attention. Please visit your nearest hospital or emergency department right away.", source: { title: "Broken arm or wrist - NHS", url: NHS + "broken-arm-or-wrist/" } },
+  "numbness": { level: "999", text: "An injured arm or wrist that is numb, tingling or has pins and needles needs immediate medical attention. Please visit your nearest hospital or emergency department right away.", source: { title: "Broken arm or wrist - NHS", url: NHS + "broken-arm-or-wrist/" } },
+  "shortness of breath": { level: "111", text: "If you have flu-like symptoms and feel short of breath, please arrange an urgent appointment with your doctor.", source: { title: "Flu - NHS", url: NHS + "flu/" } }
 };
 
 /* NHS-only Q&A for the "General medical questions" page.
