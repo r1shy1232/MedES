@@ -120,7 +120,7 @@
     let html = "";
     // Warnings ALWAYS come first and are independent of confidence.
     flags.forEach(f => {
-      html += `<div class="alert ${f.level === "111" ? "l111" : ""}" role="alert"><strong>${f.level === "999" ? "🚨 Emergency: call 999 or go to A&amp;E" : "⚠️ Get urgent advice: NHS 111"}</strong><p>${f.text}</p><p class="small">Source: ${srcLink(f.source)}</p></div>`;
+      html += `<div class="alert ${f.level === "111" ? "l111" : ""}" role="alert"><strong>${f.level === "999" ? "🚨 Please seek immediate medical attention" : "⚠️ Please visit your doctor for further advice"}</strong><p>${f.text}</p><p class="small">Source: ${srcLink(f.source)}</p></div>`;
     });
     if (!matches.length) {
       html += `<div class="card"><h3>No matching conditions found</h3><p>Your answers did not meet the criteria for any condition currently in this tool. That does <strong>not</strong> mean nothing is wrong. Speak to a pharmacist or GP, or call NHS 111 if you are worried.</p></div>`;
